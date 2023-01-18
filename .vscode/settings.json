@@ -5,6 +5,12 @@
             "driver": "SQLite",
             "name": "database",
             "database": "${workspaceFolder:catalogo-api}/database.sqlite"
+        },
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "database": "${workspaceFolder:catalogo-api}/database.sqlite",
+            "name": "Product"
         }
     ]
 }
