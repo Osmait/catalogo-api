@@ -9,8 +9,11 @@ uvicorn = {extras = ["standard"], version = "*"}
 sqlalchemy = "*"
 python-multipart = "*"
 cloudinary = "*"
+jwt = "*"
+pyjwt = "*"
 
 [dev-packages]
+autopep8 = "*"
 
 [requires]
 python_version = "3.10"

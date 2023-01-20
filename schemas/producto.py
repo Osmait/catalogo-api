@@ -12,7 +12,7 @@ class Product(BaseModel):
     class Config:
         schema_extra = {
             "example": {
-                "id": 1,
+               
                 "name": "Ropa",
                 "price": 2000,
                 "stock": 10,
