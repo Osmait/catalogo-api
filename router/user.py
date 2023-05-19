@@ -4,7 +4,7 @@ from fastapi.encoders import jsonable_encoder
 from schemas.user import User
 from config.database import Session
 from services.user import UserService
-from utils.jwt import create_token
+
 from models.user import User as UserModel
 
 
@@ -31,5 +31,5 @@ def login(user:User):
         return JSONResponse(status_code=404, content={"msg": "email of password invalid"})
 
     
-    token:str = create_token(jsonable_encoder(user_db))
-    return {"token":token}
+    # token:str = create_token(jsonable_encoder(user_db))
+    return {"token":"21212121"}

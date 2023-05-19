@@ -1,19 +1,18 @@
 from schemas.producto import Product
 from models.producto import Product as ProductModel
+from repository.product_repository import ProductRepository
 
 
 class ProductService():
-    def __init__(self,db) -> None:
-        self.db = db
+    def __init__(self) -> None:
+        self.repository = ProductRepository()
 
     def create_product(self,product:Product):
-        new_product = ProductModel(**product.dict())
-        self.db.add(new_product)
-        self.db.commit()
+        self.repository.create(product)
         return
     
     def get_movies(self):
-        result = self.db.query(ProductModel).all()
+        result = self.repository.get_all()
         return result
     
     def get_movie_byId(self,id):
